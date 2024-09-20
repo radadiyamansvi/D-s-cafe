@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url(images/registration_page_img.jpeg) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            width: 400px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .container p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 0.75rem 1.5rem 0.75rem 3rem;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 1rem;
+            color: #333;
+            background-color: #f9f9f9;
+            outline: none;
+            transition: border-color 0.3s ease, padding-top 0.3s ease;
+        }
+
+        .input-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #764ba2;
+            font-size: 1.2rem;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 3rem;
+            transform: translateY(-50%);
+            color: #333;
+            font-size: 1rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-box input:focus+label,
+        .input-box input:not(:placeholder-shown)+label {
+            top: -0.10rem;
+            left: 2rem;
+            font-size: 0.75rem;
+            color: #764ba2;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 0 0.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            color: white;
+            background-color: #764ba2;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn:hover {
+            background-color: #667eea;
+        }
+
+        .container p a {
+            color: #764ba2;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .container p a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                width: 90%;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Register Here</h2>
+        <p>Get your magical meal now!</p>
+        <form>
+            <div class="input-box">
+                <input type="text" id="name" placeholder=" " required>
+                <label for="name">Name</label>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" id="phone" placeholder=" " required>
+                <label for="phone">Contact Number</label>
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">Email</label>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" id="location" placeholder=" " required>
+                <label for="location">Location</label>
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder=" " required>
+                <label for="password">Create a Password</label>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="confirm-password" placeholder=" " required>
+                <label for="confirm-password">Confirm your Password</label>
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <button type="submit" class="btn">Register Now</button>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

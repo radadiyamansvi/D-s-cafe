@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url(images/login_page_img.jpg) no-repeat center center/cover;
+        }
+        .login {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #ffffff;
+        }
+        h4 {
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            font-family: 'Cursive', sans-serif;
+            color: #f8f9fa;
+        }
+        .inputbox {
+            margin-bottom: 1.5rem;
+        }
+        .inputbox .input {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .inputbox .input i {
+            margin-right: 0.5rem;
+            color: #ffffff;
+        }
+        .inputbox .input input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+        }
+        .inputbox .input input::placeholder {
+            color: #dcdcdc;
+        }
+        .logincheck {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+        .logincheck .login_forgot {
+            color: #ffdd83;
+            font-weight: bold;
+        }
+        .logincheck .login_forgot:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .logincheck .login_check-input {
+            width: 1rem;
+            height: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #ff6b6b;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e63946;
+        }
+        p {
+            color: #ffffff;
+            margin-top: 1.5rem;
+        }
+        p a {
+            color: #ffdd83;
+            font-weight: bold;
+        }
+        p a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .login {
+                padding: 1.5rem;
+                width: 85%;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+            h4 {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .login {
+                padding: 1rem;
+                width: 90%;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h4 {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login page Start -->
+    <section class="login">
+        <h2>Login Here</h2>
+        <h4>Tasty Treat at Your Place</h4>
+        <form action="">
+            <div class="inputbox">
+                <div class="input">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+            </div>
+            <div class="inputbox">
+                <div class="input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="logincheck">
+                <div class="logincheckbox">
+                    <input type="checkbox" class="login_check-input" id="user-check">
+                    <label for="user-check" class="login_check-label">Remember Me</label>
+                </div>
+                <a href="#" class="login_forgot">Forgot&nbsp;Password?</a>
+            </div>
+            <input type="submit" value="Login Now" class="btn">
+            <p>Don't have an account? <a href="registration.html">Register&nbsp;here</a></p>
+        </form>
+    </section>
+    <!-- login page end -->
+</body>
+</html>
